@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { useForm } from 'react-hook-form';
 
-const Inventory = ({ product, orders }) => {
+const Inventory = ({ product }) => {
 
-    // const[reload,setreload]= useState([])
+
     const { register, handleSubmit, watch, errors } = useForm();
 
 
@@ -34,13 +34,24 @@ const Inventory = ({ product, orders }) => {
 
 
     const onSubmit = data => {
-        const eventData = {
+
+        let eventData = {
             id: productKey,
+
             price: Number(data.price),
             quantity: Number(data.weight),
 
+
         };
-        // const product = { id, price, quantity };
+  
+        if (eventData.price  === 0) {
+            eventData.price = product.Price;
+           
+        }
+        if(eventData.quantity === 0){
+            eventData.quantity = product.weight;
+        }
+      
 
 
         fetch(`http://localhost:5000/update/${productKey}`, {

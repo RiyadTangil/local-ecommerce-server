@@ -5,7 +5,7 @@ import { UserContext } from '../../App';
 const PrivetRouter = ({ children, ...rest }) => {
 
     const [loggedInUser, seLoggedInUser]= useContext(UserContext)
-    // let auth = useAuth();
+
     return (
   
 

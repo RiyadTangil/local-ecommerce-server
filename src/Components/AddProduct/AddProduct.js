@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Button, Col, Form, InputGroup, Row } from 'react-bootstrap';
+import { Button, Col, Form, ProgressBar } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 
 const AddProduct = () => {
@@ -57,16 +57,7 @@ const AddProduct = () => {
   return (
     <div style={{ padding: "10px", margin: "20px" }}>
 
-      {/* 
-      <form onSubmit={handleSubmit(onSubmit)}>
-
-        <input name="name" defaultValue="New exciting Event" ref={register} />
-        <br />
-        <input name="exampleRequired" type="file" onChange={handleImageUpload} />
-        <br />
-        <input type="submit" />
-      </form> */}
-
+  
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
