@@ -8,7 +8,7 @@ const Home = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/products")
+        fetch("http://gentle-tor-61540.herokuapp.com/products")
             .then(res => res.json())
             .then(data => {
                 const orderableProduct = data.filter(product => product.imageURL !== undefined);

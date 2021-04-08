@@ -15,7 +15,7 @@ const AddProduct = () => {
       imageURL: imageURL
     };
     console.log({ eventData });
-    const url = `http://localhost:5000/addProduct`;
+    const url = `http://gentle-tor-61540.herokuapp.com/addProduct`;
 
     fetch(url, {
       method: 'POST',
