@@ -12,7 +12,7 @@ const ManageProduct = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch("http://gentle-tor-61540.herokuapp.com/products")
+        fetch("https://gentle-tor-61540.herokuapp.com/products")
             .then(res => res.json())
             .then(data => {
                 const inventoy = data.filter(pd => pd.imageURL !== undefined)

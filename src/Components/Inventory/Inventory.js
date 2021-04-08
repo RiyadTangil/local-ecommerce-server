@@ -15,7 +15,7 @@ const Inventory = ({ product }) => {
 
     const handleDelete = (event, id) => {
 
-        fetch(`http://gentle-tor-61540.herokuapp.com/delete/${id}`, {
+        fetch(`https://gentle-tor-61540.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -54,7 +54,7 @@ const Inventory = ({ product }) => {
       
 
 
-        fetch(`http://gentle-tor-61540.herokuapp.com/update/${productKey}`, {
+        fetch(`https://gentle-tor-61540.herokuapp.com/update/${productKey}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(eventData)

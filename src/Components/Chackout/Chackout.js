@@ -13,7 +13,7 @@ const Chackout = () => {
     const total = orderedProduct.reduce((total, pd) => total + pd.Price, 0)
     const handleChackout = () => {
         const orderDetails = { ...loggedInUser, ...orderedProduct, total: total, orderTime: new Date() }
-        fetch("http://gentle-tor-61540.herokuapp.com/addOrder", {
+        fetch("https://gentle-tor-61540.herokuapp.com/addOrder", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
